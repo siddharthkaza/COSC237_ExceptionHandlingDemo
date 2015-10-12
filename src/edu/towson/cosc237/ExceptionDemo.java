@@ -13,21 +13,29 @@ import java.util.Scanner;
  */
 public class ExceptionDemo {
     public static void main (String[] args) {
-        Scanner keyboard = new Scanner (System.in);
-        
-        IThrowExceptions pitcher = new IThrowExceptions();
+        //Using the Math class - expect an Arithmetic Exception
+        Scanner keyboard = new Scanner(System.in);        
+        MyMath myMath = new MyMath();
         
         try {
-            System.out.println(pitcher.quotient(4, 0));
+            System.out.println(myMath.quotient(4, 0));
         } catch (ArithmeticException e) {
             System.out.println("Divide by Zero. Can't do it.");
         }
         
+        //using the ArrayStore - Expect an ArrayIndexOutOfBounds
         ArrayStore as = new ArrayStore();
-        System.out.print("Which array element do you want?");
+        System.out.print("Which array element do you want? ");
         int which = keyboard.nextInt();
         
         System.out.println("The element is "+ as.retrieve(which));
         
+        //using the FileHandler - Expect multiple exceptions
+        //where will you handle them? here or in the FileHandler
+        
+        FileHandler fileH = new FileHandler();
+        fileH.openFileAndDivideNumbers();
+        
+            
     }
 }

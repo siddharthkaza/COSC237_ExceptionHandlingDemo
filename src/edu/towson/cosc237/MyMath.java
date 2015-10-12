@@ -9,7 +9,7 @@ package edu.towson.cosc237;
  *
  * @author skaza
  */
-public class IThrowExceptions {
+public class MyMath {
 
     public double quotient(int numerator, int denominator) {
         if (denominator == 0) {
