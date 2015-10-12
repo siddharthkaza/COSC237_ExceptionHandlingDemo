@@ -27,7 +27,7 @@ public class ExceptionDemo {
         System.out.print("Which array element do you want?");
         int which = keyboard.nextInt();
         
-        System.out.println("The element is "+ as.retrive(which));
+        System.out.println("The element is "+ as.retrieve(which));
         
     }
 }

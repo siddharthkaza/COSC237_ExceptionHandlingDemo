@@ -17,7 +17,7 @@ public class ArrayStore {
      * @param which
      * @return 
      */
-    public int retrive(int which) {
+    public int retrieve(int which) {
         return intArray[which];
     }
 }
